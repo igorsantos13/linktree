@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Marina Silva | Nutricionista Clínica</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for clean typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for the neubrutalism-inspired buttons with a softer touch */
+        body {
+            /* Soft background gradient transitioning from gray/slate through blue to subtle emerald/green */
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 65%, #f0fdf4 100%);
+            min-height: 100vh;
+        }
+
+        .link-button {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            /* Solid shadow for depth in deep blue tone */
+            box-shadow: 4px 4px 0px rgba(30, 58, 138, 0.8);
+            border: 2px solid #1e3a8a;
+        }
+
+        .link-button:hover {
+            /* Expanding effect on hover */
+            transform: scale(1.05) translateY(-2px);
+            /* Shadow increases to match the lift */
+            box-shadow: 6px 6px 0px rgba(30, 58, 138, 0.6);
+            background-color: #ffffff;
+        }
+
+        .link-button:active {
+            transform: scale(0.98) translate(2px, 2px);
+            box-shadow: 0px 0px 0px rgba(30, 58, 138, 0);
+        }
+        
+        /* Subtle animation for the profile image border in blue tone */
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(2, 132, 199, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0); }
+        }
+        
+        .profile-img-container {
+            animation: pulse-border 3s infinite;
+        }
+    </style>
+</head>
+<body class="text-slate-900 font-sans antialiased flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
+
+    <div class="w-full max-w-md mx-auto space-y-8 relative">
+        
+        <!-- Share button top right -->
+        <!-- <button class="absolute top-0 right-0 p-3 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow text-blue-600 hover:text-blue-800 border border-slate-200" aria-label="Compartilhar">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </button> -->
+
+        <!-- Profile Section -->
+        <header class="flex flex-col items-center text-center space-y-4 pt-6">
+            <!-- Circular Profile Image -->
+            <div class="relative profile-img-container rounded-full p-1 bg-white">
+                <img src="FOTO-PROFISSIONAL-GPT.jpg" 
+                     alt="Dra. Marina Silva" 
+                     class="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-sky-200">
+            </div>
+
+            <!-- Name and Title -->
+            <div class="space-y-1">
+                <h1 class="text-2xl sm:text-3xl font-bold font-serif text-slate-900 tracking-tight">
+                    Igor Web Builder
+                </h1>
+                <p class="text-blue-700 font-medium tracking-wide uppercase text-sm">
+                    Desenvolvedor especializado em sites profissionais para a área da saude
+                </p>
+                <!-- <p class="text-slate-500 text-sm opacity-80 pt-1">CRN-3 45678</p> -->
+            </div>
+
+            <!-- Description -->
+            <p class="text-slate-600 text-base max-w-sm mt-4 font-light leading-relaxed">
+                Transformo a presença online de profissionais da saúde com sites profissionais.
+            </p>
+        </header>
+
+        <!-- Links Section -->
+        <main class="flex flex-col gap-4 mt-8 w-full">
+            
+            <!-- Link 1: Agendamento -->
+            <!-- <a href="#" class="link-button relative flex items-center justify-center w-full py-4 px-6 bg-sky-50 rounded-2xl text-slate-900 group">
+                <div class="absolute left-6 text-blue-600 group-hover:text-blue-800 transition-colors">
+                    <i class="fa-regular fa-calendar-check text-xl"></i>
+                </div>
+                <span class="font-semibold text-base tracking-wide">Agende sua Consulta</span>
+            </a> -->
+
+            <!-- Link 2: Site/Blog -->
+            <a href="https://www.behance.net/igorsantos192" target="_blank" class="link-button relative flex items-center justify-center w-full py-4 px-6 bg-sky-50 rounded-2xl text-slate-900 group">
+                <div class="absolute left-6 text-blue-600 group-hover:text-blue-800 transition-colors">
+                    <i class="fa-solid fa-globe text-xl"></i>
+                </div>
+                <span class="font-semibold text-base tracking-wide">Visite meu Portfólio</span>
+            </a>
+
+            <!-- Link 3: Receitas (E-book)
+            <!-- <a href="#" class="link-button relative flex items-center justify-center w-full py-4 px-6 bg-sky-50 rounded-2xl text-slate-900 group">
+                <div class="absolute left-6 text-blue-600 group-hover:text-blue-800 transition-colors">
+                    <i class="fa-solid fa-book-open text-xl"></i>
+                </div>
+                <span class="font-semibold text-base tracking-wide">E-book de Receitas Grátis</span>
+                <!-- Green accent badge -->
+                
+            </a>
+
+            <!-- Link 4: Instagram -->
+            <a href="https://www.instagram.com/igor.webdesign/" target="_blank" class="link-button relative flex items-center justify-center w-full py-4 px-6 bg-sky-50 rounded-2xl text-slate-900 group">
+                <div class="absolute left-6 text-blue-600 group-hover:text-blue-800 transition-colors">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                </div>
+                <span class="font-semibold text-base tracking-wide">Instagram</span>
+                
+            </a>
+
+            <!-- Link 5: WhatsApp -->
+            <a href="#" class="link-button relative flex items-center justify-center w-full py-4 px-6 bg-sky-50 rounded-2xl text-slate-900 group">
+                <div class="absolute left-6 text-emerald-600 group-hover:text-emerald-700 transition-colors">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                </div>
+                <div class="flex items-center justify-between w-full px-6">
+                    <span class="font-semibold text-base tracking-wide">Solicite seu orçamento agora!</span>
+                    <span class="absolute right-6 bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                        Promoção!!!
+                    </span>
+                </div>
+            </a>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center pb-8">
+            <p class="text-slate-500 text-sm">
+                Desenvolvido por Igor Web Designer.
+            </p>
+            <p class="text-slate-500 text-sm">
+                Landing Pages, LinkTrees, Sites Institucionais e muito mais!
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
